@@ -1,0 +1,275 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Feed</title>
+
+    <!--Enlace Componentes Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!--Enlace Iconos Font Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+
+    <!---Navbar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class=" container-fluid" >
+
+            <!--Lado izquierda navbar -->
+            <a class="navbar-brand" href="#">
+                <span class="fa-brands fa-instagram fa-xl "></span>
+                Instagram
+            </a>
+            
+
+            <!--Menu hamburguesa nav responsive -->
+            <button 
+                class="navbar-toggler" 
+                type="button" 
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" 
+                aria-controls="navbarSupportedContent" 
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+      
+           <!--Lado derecho navbar -->
+
+            <div class="  collapse navbar-collapse " id="navbarSupportedContent">
+
+                <!-- Boton del modal -->
+                <button 
+                    type="button" 
+                    class="btn btn-success  ms-auto" 
+                    data-bs-toggle="modal" 
+                    data-bs-target="#exampleModal">
+                    Create new post
+                 </button>
+
+
+                        <!--Dropdown menu -->
+                <ul class="navbar-nav mb-2 mb-lg-0 ">
+                    <div class="dropdown-center" >
+                        <button 
+                            class="btn btn-secondary dropdown-toggle" 
+                            type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <span class="fa-solid fa-gear mr-1"></span>
+                        </button>
+
+                        <ul class="dropdown-menu  dropdown-menu-end  ">
+                            <li><a class="dropdown-item" href="#">Profile</a></li>
+                            <li> <a class="dropdown-item" href="#">Acesibility</a></li>
+                            <li> <a class="dropdown-item" href="#">Privacy and Data</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item text-danger" href="#">Log Out</a></li>
+                        </ul>
+                    </div>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+   <!-- Botones para cambiar la vista del grid al card -->
+   <ul class="nav nav-pills mb-5 mt-4 justify-content-center " id="pills-tab" role="tablist">
+        <li  class="nav-item  mx-4" role="presentation">
+                <button 
+                    class=" active btn btn-outline-secondary border-0 p-1" 
+                    id="pills-home-tab" 
+                    data-bs-toggle="pill" 
+                    data-bs-target="#pills-home"
+                    type="button" 
+                    role="tab" 
+                    aria-controls="pills-home" 
+                    aria-selected="true">
+                    <i class="fa-solid fa-table-cells fa-xl"></i>
+                </button>
+        </li>
+
+
+        <li class="nav-item mx-4 " role="presentation">
+
+                <button 
+                    class=" btn  btn-outline-secondary border-0 p-1 " 
+                    id="pills-profile-tab" 
+                    data-bs-toggle="pill" 
+                    data-bs-target="#pills-profile"
+                    type="button" 
+                    role="tab" 
+                    aria-controls="pills-profile" 
+                    aria-selected="false">
+                    <i class="fa-solid fa-square fa-xl"></i>
+                    
+                </button>
+        </li>
+  
+    </ul>
+  
+     <!-- Vista de Grid  -->
+    <div class="tab-content" id="pills-tabContent">
+        <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">
+               <!-- Container con un div row en el que estan todas las imagenes en vista grid   -->
+            <div class="container">
+
+                <div class="row">
+
+                    <div class="col-sm-12 col-md-6 col-lg-4 p-1">
+                        <img class="img-fluid" src="https://camisetasfutbolbaloncesto.com/cdn/shop/products/image_b5502528-ef04-4225-ad8c-4798128cbbd4.jpg?v=1679408328&width=1445" alt="random pic">
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-4 p-1">
+                        <img class="img-fluid" src="https://img1.picmix.com/output/pic/normal/6/2/7/4/10554726_271d0.gif" alt="random pic">
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-4 p-1">
+                        <img class="img-fluid" src="https://elements-resized.envatousercontent.com/envato-shoebox/9527/60cd-76bd-44bd-b268-5e468ab65434/Iberian%20lynx%20Portrait%20on%20Bright%20Background%20_09A4088.jpg?w=500&cf_fit=scale-down&mark-alpha=18&mark=https%3A%2F%2Felements-assets.envato.com%2Fstatic%2Fwatermark4.png&q=85&format=auto&s=9826248589175f200b16fca445e9a7f39196f8078c606003329b584402e63554" alt="random pic">
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-4 p-1">
+                        <img class="img-fluid" src="https://i1.sndcdn.com/artworks-E1tVjk318e3uV9mU-Ss4Cug-t500x500.jpg" alt="random pic">
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-4 p-1">
+                        <img class="img-fluid" src="https://yt3.googleusercontent.com/6hoRnaVBWDWZ6-A2kHG7NzfAN_7hXfSyoNf0qB0ZKNillfqNohnDr_9AaNw2jS7VwYSuEuVVMOs=s900-c-k-c0x00ffffff-no-rj" alt="random pic">
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-4 p-1">
+                        <img class="img-fluid" src="https://www.icegif.com/wp-content/uploads/icegif-1157.gif" alt="random pic">
+                    </div>
+                
+                    <div class="col-sm-12 col-md-6 col-lg-4 p-1">
+                        <img class="img-fluid" src="https://upload.wikimedia.org/wikipedia/commons/9/91/Azufre.gif" alt="random pic">
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-4 p-1">
+                        <img class="img-fluid" src="https://giffiles.alphacoders.com/222/222698.gif" alt="random pic">
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-4 p-1">
+                        <img class="img-fluid" src="https://i1.sndcdn.com/artworks-9KQLbU9C6Y11u7P3-sl9Dog-t500x500.jpg" alt="random pic">
+                     </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>    
+
+    <!-- Vista de Card-->
+   <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">
+           
+        <div class="container d-flex flex-column align-items-center">
+
+            <div class="card my-5" style=" width:26rem">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <h3>ATM </h3>
+                    <p class="small m-0">18/02</p>
+                </div>
+
+                <img src="https://camisetasfutbolbaloncesto.com/cdn/shop/products/image_b5502528-ef04-4225-ad8c-4798128cbbd4.jpg?v=1679408328&width=1445" class="card-img-top" alt="...">
+
+                <div class="card-body">
+                    <h5 class="card-title">298 Likes</h5>
+                    <p class="card-text">Atlético de Madrid, fundado en 1903, ha cosechado innumerables éxitos y títulos en el fútbol.</p>
+                   
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="container d-flex flex-column align-items-center">
+
+            <div class="card my-5" style=" width:26rem">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <h3>Naruto Shippuden</h3>
+                    <p class="small m-0">28/03</p>
+                </div>
+
+                <img src="https://img1.picmix.com/output/pic/normal/6/2/7/4/10554726_271d0.gif" class="card-img-top" alt="...">
+
+                <div class="card-body">
+                    <h5 class="card-title">12.000 Likes</h5>
+                    <p class="card-text">Naruto Shippuden sigue las aventuras de Naruto Uzumaki mientras lucha por proteger a su aldea y convertirse en el Hokage.</p>
+                   
+                </div>
+            </div>
+        </div>
+
+        <div class="container d-flex flex-column align-items-center">
+
+            <div class="card my-5" style=" width:26rem">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <h3>Lince Iberico</h3>
+                    <p class="small m-0">19/11</p>
+                </div>
+
+                <img src="https://elements-resized.envatousercontent.com/envato-shoebox/9527/60cd-76bd-44bd-b268-5e468ab65434/Iberian%20lynx%20Portrait%20on%20Bright%20Background%20_09A4088.jpg?w=500&cf_fit=scale-down&mark-alpha=18&mark=https%3A%2F%2Felements-assets.envato.com%2Fstatic%2Fwatermark4.png&q=85&format=auto&s=9826248589175f200b16fca445e9a7f39196f8078c606003329b584402e63554" class="card-img-top" alt="...">
+
+                <div class="card-body">
+                    <h5 class="card-title">785 Likes</h5>
+                    <p class="card-text">Los linces ibéricos, en peligro de extinción, son felinos majestuosos que habitan en la península ibérica y representan un símbolo de conservación. </p>
+                   
+                </div>
+            </div>
+        </div>
+
+        <div class="container d-flex flex-column align-items-center">
+
+            <div class="card my-5" style=" width:26rem">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <h3>Poliphia</h3>
+                    <p class="small m-0">12/09</p>
+                </div>
+
+                <img src="https://i1.sndcdn.com/artworks-E1tVjk318e3uV9mU-Ss4Cug-t500x500.jpg" class="card-img-top" alt="...">
+
+                <div class="card-body">
+                    <h5 class="card-title">657 Likes</h5>
+                    <p class="card-text">Poliphia, con su estilo innovador, fusiona géneros musicales y destaca por su virtuosismo en la guitarra, capturando a fanáticos de todo el mundo.</p>
+                   
+                </div>
+            </div>
+        </div>
+
+        
+        
+
+       
+
+        
+    </div>        
+
+<!-- Codigo de Boostrap para Modal  -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+        <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Create a new post </h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label for="message-text" class="col-form-label">Caption:</label>
+                        <textarea class="form-control" id="message-text" placeholder="Add the caption of your post here"></textarea>
+                    </div>
+                </form>
+                <button class="btn btn-outline-secondary"><i class="fa-solid fa-camera"></i></span></button>
+                <button class="btn btn-outline-secondary"><i class="fa-solid fa-location-dot"></i></span></button>
+        </div>
+        
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary bg-success">Publish</button>
+        </div>
+
+        </div>
+    </div>
+    </div>
+
+    <!-- Codigo necesario para la funcionalidad de Copmponentes Boostrap-->
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
